@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: paysense-backend
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+  datasource:
+    url: jdbc:postgresql://localhost:5432/paysense
+    username: paysense_user
+    password: paysense_password
+    driver-class-name: org.postgresql.Driver
+  flyway:
+    locations: classpath:db/migration
+    enabled: true
+
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+
+jwt:
+  secret: your-secret-key-change-in-production-at-least-32-characters-long
+  expiration: 86400000
+
+logging:
+  level:
+    root: INFO
+    com.paysense: DEBUG
