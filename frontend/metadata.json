@@ -1,0 +1,6 @@
+{
+  "name": "PaySense",
+  "description": "A behavioral finance app that passively tracks UPI transactions via SMS and helps users become aware of their daily spending habits.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}
